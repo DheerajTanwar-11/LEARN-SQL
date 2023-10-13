@@ -119,7 +119,7 @@
 ### KEYS
 
 1. PRIMARY KEY : It is a columns in a table that uniquely identifies each row. There is only one primary key in a table and it cannot be `Null` .
-2. FOREIGN KEY : A foreign key is a column(or set of columns) in a table that refers to primary key in other tables. There can be multipl foreign key's. Foreign key's can have multiple or null values.
+2. FOREIGN KEY : A foreign key is a column(or set of columns) in a table that refers to primary key in other tables. There can be multipl foreign key's. Foreign key's can have multiple or null values. <br>
    `FOREIGN KEY column_name references table_name(column_name)`
 
 ### CONSTRAINST =>

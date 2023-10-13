@@ -115,3 +115,20 @@
 3. DML(Data Manipulation Language) : Use to modify the database. INSERT, UPDATE, DELETE
 4. DCL(Data Control Language) : Use to grant and revoke permission. GRANT, REVOKE.
 5. TCL(Transaction Control Language) : Used to manage transactions. COMMIT, ROLLBACK, START TRANSACTION, SAVEPOINT.
+
+### KEYS
+
+1. PRIMARY KEY : It is a columns in a table that uniquely identifies each row. There is only one primary key in a table and it cannot be `Null` .
+2. FOREIGN KEY : A foreign key is a column(or set of columns) in a table that refers to primary key in other tables. There can be multipl foreign key's. Foreign key's can have multiple or null values.
+   FOREIGN KEY column_name references table_name(column_name)
+
+### CONSTRAINST =>
+
+SQL Constrainst are use to specify rules for data in table.
+
+1. `NOT NULL` : Column cannot have null value.
+2. `UNIQUE` : All values in column should be unique.
+3. `PRIMARY KEY` : Make a column unique & not null but used only for one.
+4. `FOREIGN KEY` : Prevent actions that would destroy links between tables.
+
+There are more constraints there in SQL.

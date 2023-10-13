@@ -130,5 +130,7 @@ SQL Constrainst are use to specify rules for data in table.
 2. `UNIQUE` : All values in column should be unique.
 3. `PRIMARY KEY` : Make a column unique & not null but used only for one.
 4. `FOREIGN KEY` : Prevent actions that would destroy links between tables.
+5. `DEFAULT` : Set the default value to the column.
+6. `CHECK` : It can limit the values allowed in the column.
 
-There are more constraints there in SQL.
+There are more constraints there in SQL but here we have discussed only few of them.

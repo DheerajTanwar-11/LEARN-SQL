@@ -108,7 +108,7 @@
 </tr>
 </table>
 
-#### Types of Commands in SQL =>
+### Types of Commands in SQL =>
 
 1. DQL(Data Query Language) : Use to retrieve data from the table.
 2. DDL(Data Definition Language) : Use to create, alter and delete database object like tables, indexes, etc. CREATE, DROP, ALTER, RENAME, TRUNCATE.

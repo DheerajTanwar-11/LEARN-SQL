@@ -134,3 +134,40 @@ SQL Constrainst are use to specify rules for data in table.
 6. `CHECK` : It can limit the values allowed in the column.
 
 There are more constraints there in SQL but here we have discussed only few of them.
+
+### SELECT Command in SQL =>
+
+`SELECT` command in SQL is use to retrieve data from database tables.<br>
+`SELECT * FROM table_name` : Use to retrieve whole table from the database.<br>
+`SELECT col1, col2 FROM table_name` : Use to retrieve specific columns from table.<br>
+`SELECT DISTINCT col1 FROM table_name` : Use to retrieve unique data from the table.
+
+### WHERE Clause in SQL =>
+
+1. `WHERE` Clause in SQL is used to define some conditions on basis of which we want to retrieve data from the tables.
+2. `SELECT * FROM table_name WHERE conditions` : Use to retrieve data from the table on the basis of some conditions.
+3. With the `WHERE` clause we can use different operators like Arithmetic Operators(+, -, /, \*, %), Comparison Operators
+   (=, !=, <, >, <=, >=), Logical Operators(AND, OR, NOT, IN, BETWEEN, ALL, LIKE, ANY) and Bitwise Operators(BITWISE AND, BITWISE OR).
+
+### ORDER BY Clause in SQL =>
+
+1. `ORDER BY` Clause in SQL is used to retrieve data from table in a particular order like Ascending Order(ASC) or
+   Descending Order(DESC).
+2. `SELECT * FROM tableP_name ORDER BY column_name ASC/DESC` : Use to retrieve data from table according to Ascending or
+   Descending Order of column.
+
+### Aggregate Functions in SQL =>
+
+1. Aggregate functions perform a calculation on a set of values, and return a single value.
+2. Some of these aggregate functions are :
+    - COUNT()
+    - MAX()
+    - MIN()
+    - SUM()
+    - AVG()
+
+### GROUP BY Clause in SQL =>
+
+1. `GROUP BY` Clause in SQL is used to group rows that have the same values into summary rows. It collects data from<br>
+   multiple records and groups the result by one or more column.
+2. Generally we use `GROUP BY` clause with some aggregation functions.

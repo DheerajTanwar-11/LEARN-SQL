@@ -168,6 +168,6 @@ There are more constraints there in SQL but here we have discussed only few of t
 
 ### GROUP BY Clause in SQL =>
 
-1. `GROUP BY` Clause in SQL is used to group rows that have the same values into summary rows. It collects data from<br>
+1. `GROUP BY` Clause in SQL is used to group rows that have the same values into summary rows. It collects data from
    multiple records and groups the result by one or more column.
 2. Generally we use `GROUP BY` clause with some aggregation functions.

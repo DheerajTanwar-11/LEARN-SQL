@@ -78,3 +78,36 @@ SELECT SUM(marks) FROM student;
 
 /*Retrieving data from table using GROUP BY clause*/
 SELECT city, COUNT(name) FROM student GROUP BY city;
+
+/*Practise Question :- Write a query to find avg marks in each city in ascending order*/
+SELECT city, avg(marks) FROM student GROUP BY city ORDER BY avg(marks);
+
+/*Creating new table names as 'payment'*/
+CREATE TABLE payment(
+customer_id INT PRIMARY KEY,
+customer VARCHAR(50),
+mode VARCHAR(50),
+city VARCHAR(50)
+);
+
+/*Inserting data into payment*/
+INSERT INTO payment (customer_id, customer, mode, city) VALUES(101, "Olivia Barrett", "Netbanking", "Portland"),
+(102, "Ethan Sinclair", "Credit Card", "Miami"),
+(103, "Maya Hernandez", "Credit Card", "Seattle"), 
+(104,"Liam Donovan","Netbanking","Denver"), 
+(105,"Sophia Nguyen", "Credit Card", "New Orleans"),
+(106,"Caleb Foster","Debit Card","Minneapolis"),
+(107,"Ava Patel", "Debit Card","Phoenix"),
+(108,"Lucas Carter","Netbanking","Boston"),
+(109,"Isabella Martinez", "Netbanking","Nashville"),
+(110,"Jackson Brooks", "Credit Card","Boston");
+
+/*Retrieving all the data of the table payment*/
+SELECT * FROM payment;
+
+/*Practise Question :- For the given table payment, find the total payment according to each method*/
+SELECT mode, count(customer) FROM payment GROUP BY mode;
+
+/*Retriving data using Having Clause*/
+SELECT * FROM payment HAVING mode = "Netbanking";
+SELECT count(name),city FROM student GROUP BY city HAVING max(marks) > 70;

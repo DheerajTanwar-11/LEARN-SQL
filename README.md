@@ -171,3 +171,18 @@ There are more constraints there in SQL but here we have discussed only few of t
 1. `GROUP BY` Clause in SQL is used to group rows that have the same values into summary rows. It collects data from
    multiple records and groups the result by one or more column.
 2. Generally we use `GROUP BY` clause with some aggregation functions.
+
+### Having Clause in SQL =>
+
+1. It is similar to `WHERE` clause i.e applies some condition on row. It is used when we want to apply a condition after
+   grouping.
+2. `SELECT * FROM table_name HAVING consition;` : It will return the data on the basis of some condition.
+
+### General Order of applying clauses on SQL query =>
+
+1. `SELECT`Columns
+2. `FROM`table_name
+3. `WHERE`condition
+4. `GROUP BY`columns
+5. `HAVING`condition
+6. `ORDER BY` columns ASC/DESC

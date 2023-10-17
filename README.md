@@ -178,7 +178,7 @@ There are more constraints there in SQL but here we have discussed only few of t
    grouping.
 2. `SELECT * FROM table_name HAVING consition;` : It will return the data on the basis of some condition.
 
-### General Order of applying clauses on SQL query =>
+### General Order of applying commands on SQL query =>
 
 1. `SELECT`Columns
 2. `FROM`table_name
@@ -186,3 +186,21 @@ There are more constraints there in SQL but here we have discussed only few of t
 4. `GROUP BY`columns
 5. `HAVING`condition
 6. `ORDER BY` columns ASC/DESC
+
+### UPDATE command in SQL query =>
+
+1. `UPDATE` command is used to update existing rows in the table.
+2. `UPDATE table_name SET col1 = val1 WHERE col1 = "A";` : This command will UPDATE the columns value to val1 where col1 has
+   value "A".
+
+### DELETE Command in SQL query =>
+
+1. `DELETE` command is used to delete existing rows in the table.
+2. `DELETE FROM table_name WHERE condition;` : This command will delete the row which meets the condition.
+
+### Safe Update Mode in SQL =>
+
+1. By default in MySQL safe update mode is always ON so that we do not run UPDATE or DELETE query on any sensitive data by
+   mistake.
+2. To run those queries first we need to turn off the Safe Update Mode by runnning a query `SET SQL_SAFE_UPDATES = 0` and to
+   turn on the Safe Update Mode, run the query `SET SQL_SAFE_UPDATES = 1`.

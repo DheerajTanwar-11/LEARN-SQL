@@ -119,8 +119,13 @@
 ### KEYS
 
 1. PRIMARY KEY : It is a columns in a table that uniquely identifies each row. There is only one primary key in a table and it cannot be `Null` .
-2. FOREIGN KEY : A foreign key is a column(or set of columns) in a table that refers to primary key in other tables. There can be multipl foreign key's. Foreign key's can have multiple or null values. <br>
-   `FOREIGN KEY column_name references table_name(column_name)`
+2. FOREIGN KEY : A foreign key is a column(or set of columns) in a table that refers to primary key in other tables. There can be multipl foreign key's. Foreign key's can have multiple or null values.
+    - `FOREIGN KEY column_name references table_name(column_name)`
+    - Cascading for Foreign Key :
+        - On Delete Cascade : When we create a foreign key using this option, it deletes the referencing rows in the child
+          table when the referenced row is deleted in the parent table which has a primary key.
+        - On Update Cascade : When we create a foreign key using this option, the referencing rows are updated in the child
+          table when the referenced row is updated in the parent table which has a primary key.
 
 ### CONSTRAINST =>
 
@@ -204,3 +209,11 @@ There are more constraints there in SQL but here we have discussed only few of t
    mistake.
 2. To run those queries first we need to turn off the Safe Update Mode by runnning a query `SET SQL_SAFE_UPDATES = 0` and to
    turn on the Safe Update Mode, run the query `SET SQL_SAFE_UPDATES = 1`.
+
+### ALTER Command in SQL =>
+
+1. `ALTER` command is used to alter the table. Alter means to make changes in the schema of the table like Adding or Deleting the column Or Renaming the table.
+2. `ALTER TABLE table_name ADD COLUMN col_name datatype constraint;` : To add column in the table.
+3. `ALTER TABLE table_name DROP COLUMN col_name;` : To delete the column in the table.
+4. `ALTER TABLE table_name RENAME TO new_table_name;` : To rename the table.
+5. We can also change or modify columns in the table.

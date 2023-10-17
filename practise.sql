@@ -111,3 +111,66 @@ SELECT mode, count(customer) FROM payment GROUP BY mode;
 /*Retriving data using Having Clause*/
 SELECT * FROM payment HAVING mode = "Netbanking";
 SELECT count(name),city FROM student GROUP BY city HAVING max(marks) > 70;
+
+/*UPDATING the value of column grade from A to O*/
+SET SQL_SAFE_UPDATES = 0; /*Turning the safe update mode to OFF*/
+UPDATE student 
+SET grade = "O"
+WHERE grade = "A";
+SET SQL_SAFE_UPDATES = 1; /*Turning the safe update mode ON */
+/*Retrieving the data of student table after update*/
+SELECT * FROM student;
+
+/*DELETING the data of student having grade = 'F'*/
+DELETE FROM student
+WHERE grade="F";
+
+SELECT * FROM student;
+
+/*Creating the table 'department'*/
+CREATE TABLE department(
+id INT PRIMARY KEY,
+name VARCHAR(50)
+);
+
+/*Creating the table 'teacher'*/
+CREATE TABLE teacher(
+id INT PRIMARY KEY,
+name VARCHAR(50),
+dept_id INT,
+FOREIGN KEY (dept_id) REFERENCES department(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE
+);
+
+/*INSERTING DATA INTO department and teacher*/
+INSERT INTO department (id, name) VALUES (101, "English"),(102,"Hindi"),(103,"Maths"),(104,"Science"),(105,"Social Science");
+INSERT INTO teacher (id, name, dept_id) VALUES (1, "Thomas", 101), (2, "Rajesh", 102), (3, "Ramanujan", 103), (4, "Newton", 104), (5, "Akhilesh", 105);
+
+/*Retrieving data from department and teacher*/
+SELECT * FROM department;
+SELECT * FROM teacher;
+
+/*Testing the Cascading*/
+/*ON UPDATE CASCADING*/
+UPDATE department
+SET id = 106
+WHERE id = 102;
+SELECT * FROM department;
+SELECT * FROM teacher;
+/*ON DELETE CASCADING*/
+DELETE FROM department
+WHERE id = 106;
+SELECT * FROM department;
+SELECT * FROM teacher;
+
+/*Testing the ALTER command*/
+/*Renaming the payment table to payment_details*/
+ALTER TABLE payment
+RENAME TO payment_details;
+/*Adding the secondry_mode column to payment_details */
+ALTER TABLE payment_details
+ADD COLUMN secondry_mode VARCHAR(50);
+/*Deleting the column secondry_mode from payment _details*/
+ALTER TABLE payment_details
+DROP COLUMN secondry_mode;

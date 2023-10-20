@@ -230,7 +230,7 @@ There are more constraints there in SQL but here we have discussed only few of t
 1. `JOINS` in SQL are used to combine rows from two or more tables, based on related column between them.
 2. Types of JOIN : There are 4 types of JOIN in SQL
     - INNER JOIN : Use to get common data present in both tables.
-    - LEFT OUTER JOIN : Use to get data that is present in table_1 and table_2 but not that data that is only present in  
+    - LEFT OUTER JOIN : Use to get data that is present in table_1 and table_2 but not that data that is only presentin
       table_2.
     - RIGHT OUTER JOIN : Use to get data that is present in table_2 and table_1 but not that data that in only present in
       table_1.

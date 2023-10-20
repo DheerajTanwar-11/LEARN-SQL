@@ -236,3 +236,11 @@ There are more constraints there in SQL but here we have discussed only few of t
       table_1.
     - FULL OUTER JOIN : Use to get data of both the tables.
       <img src="https://www.metabase.com/learn/images/sql-join-types/join-types.png" width=600px />
+
+### Syntax of writing JOINS
+
+1. `INNER JOIN` : `SELECT columns FROM table_1 INNER JOIN table_2 ON table_1.column_name = table_2.column_name;`
+2. `LEFT JOIN` : `SELECT columns FROM table_1 LEFT JOIN table_2 ON table_1.column_name = table_2.column_name;`
+3. `RIGHT JOIN` : `SELECT columns FROM table_1 RIGHT JOIN table_2 ON table_1.column_name = table_2.column_name;`
+4. `FULL JOIN` : `SELECT columns FROM table_1 LEFT JOIN table_2 ON table_1.column_name = table_2.column_name UNION SELECT *  FROM table_1 RIGHT JOIN table_2 ON table_1.column_name = table_2.column_name`
+5. For `FULL JOIN` we do not have any keyword in MySQL so we do UNION of LEFT JOIN and RIGHT JOIN.

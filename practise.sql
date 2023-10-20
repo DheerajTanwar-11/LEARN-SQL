@@ -174,3 +174,42 @@ ADD COLUMN secondry_mode VARCHAR(50);
 /*Deleting the column secondry_mode from payment _details*/
 ALTER TABLE payment_details
 DROP COLUMN secondry_mode;
+
+/*TRUNCATE Command*/
+TRUNCATE TABLE payment_details;
+SELECT * FROM payment_details;
+
+/*Reinserting the data into payment_details again for further use*/
+INSERT INTO payment_details (customer_id, customer, mode, city) VALUES(101, "Olivia Barrett", "Netbanking", "Portland"),
+(102, "Ethan Sinclair", "Credit Card", "Miami"),
+(103, "Maya Hernandez", "Credit Card", "Seattle"), 
+(104,"Liam Donovan","Netbanking","Denver"), 
+(105,"Sophia Nguyen", "Credit Card", "New Orleans"),
+(106,"Caleb Foster","Debit Card","Minneapolis"),
+(107,"Ava Patel", "Debit Card","Phoenix"),
+(108,"Lucas Carter","Netbanking","Boston"),
+(109,"Isabella Martinez", "Netbanking","Nashville"),
+(110,"Jackson Brooks", "Credit Card","Boston");
+SELECT * FROM payment_details;
+
+/*UNDERSTANDING JOINS IN SQL*/
+/*Creating table course for joins*/
+CREATE TABLE course(
+id INT PRIMARY KEY,
+course_name VARCHAR(50)
+);
+INSERT INTO course (id, course_name) VALUES (101, "MATHS"),(102, "HINDI"),(103,"SCIENCE");
+/*APPLYING INNER JOIN ON student and course*/
+SELECT * FROM student INNER JOIN course ON student.rollno = course.id;
+/*APPLYING LEFT JOIN ON student and course*/
+SELECT * FROM student LEFT JOIN course on student.rollno = course.id;
+/*APPLYING RIGHT JOIN ON student and course*/
+SELECT * FROM student RIGHT JOIN course on student.rollno = course.id;
+/*APPLYING FULL JOIN*/
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.rollno = c.id
+UNION
+SELECT * FROM student as s
+RIGHT JOIN course as c
+ON s.rollno = c.id;

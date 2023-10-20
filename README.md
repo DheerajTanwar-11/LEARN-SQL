@@ -217,3 +217,22 @@ There are more constraints there in SQL but here we have discussed only few of t
 3. `ALTER TABLE table_name DROP COLUMN col_name;` : To delete the column in the table.
 4. `ALTER TABLE table_name RENAME TO new_table_name;` : To rename the table.
 5. We can also change or modify columns in the table.
+
+### TRUNCATE Command in SQL =>
+
+1. `TRUNCATE` command is used to delete the data of the table.
+2. Difference in `DROP` & `TRUNCATE` => `DROP` will delete the table whereas `TRUNCATE` will delete the data of table but
+   table will exist.
+3. `TRUNCATE TABLE table_name;` : It will delete the data of table.
+
+### JOINS in SQL =>
+
+1. `JOINS` in SQL are used to combine rows from two or more tables, based on related column between them.
+2. Types of JOIN : There are 4 types of JOIN in SQL
+    - INNER JOIN : Use to get common data present in both tables.
+    - LEFT OUTER JOIN : Use to get data that is present in table_1 and table_2 but not that data that is only present in  
+      table_2.
+    - RIGHT OUTER JOIN : Use to get data that is present in table_2 and table_1 but not that data that in only present in
+      table_1.
+    - FULL OUTER JOIN : Use to get data of both the tables.
+      <img src="https://www.metabase.com/learn/images/sql-join-types/join-types.png" width=600px />

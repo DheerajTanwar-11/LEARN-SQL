@@ -244,3 +244,8 @@ There are more constraints there in SQL but here we have discussed only few of t
 3. `RIGHT JOIN` : `SELECT columns FROM table_1 RIGHT JOIN table_2 ON table_1.column_name = table_2.column_name;`
 4. `FULL JOIN` : `SELECT columns FROM table_1 LEFT JOIN table_2 ON table_1.column_name = table_2.column_name UNION SELECT *  FROM table_1 RIGHT JOIN table_2 ON table_1.column_name = table_2.column_name`
 5. For `FULL JOIN` we do not have any keyword in MySQL so we do UNION of LEFT JOIN and RIGHT JOIN.
+
+### ALIAS in SQL =>
+
+1. `ALIAS` in sql is use to present table with another name for temporary purposes. We can `ALIAS` for columns also.
+2. `SELECT * FROM table_name AS ALIAS_NAME` : It will consider ALIAS_NAME as table_name temporarily.

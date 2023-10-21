@@ -213,3 +213,10 @@ UNION
 SELECT * FROM student as s
 RIGHT JOIN course as c
 ON s.rollno = c.id;
+
+/*Using SUB QUERIES to find out student having marks greater than average marks of class*/
+SELECT * FROM student WHERE marks > (SELECT avg(marks) FROM student);
+/*Find student with even roll number*/
+SELECT * FROM student WHERE rollno IN (SELECT rollno FROM student WHERE rollno % 2 = 0);
+/*Find max marks of student from delhi*/
+SELECT * FROM student WHERE marks = (SELECT max(marks) FROM student WHERE city = "Delhi");
